@@ -96,3 +96,5 @@ export default async function Search({
     </>
   );
 }
+
+export const dynamic = 'force-dynamic';
