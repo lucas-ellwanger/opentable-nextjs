@@ -21,8 +21,6 @@ export default function RestaurantCard({ restaurant }: Props) {
             }}
             className='duration-300 group-hover:scale-110 group-hover:-translate-y-2'
             sizes='(33vw)'
-            placeholder='blur'
-            blurDataURL='/spinner.svg'
             fill
           />
         </div>

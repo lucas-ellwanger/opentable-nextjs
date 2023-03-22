@@ -2,6 +2,8 @@ import NavBar from './components/NavBar';
 import './globals.css';
 import AuthContext from './context/AuthContext';
 import 'react-datepicker/dist/react-datepicker.css';
+import { Suspense } from 'react';
+import LoadingHomePage from './LoadingHomePage';
 
 // export const metadata = {
 //   title: 'OpenTable',
@@ -21,7 +23,7 @@ export default function RootLayout({
           <AuthContext>
             <main className='max-w-screen-2xl m-auto bg-white'>
               <NavBar />
-              {children}
+              <Suspense fallback={LoadingHomePage()}>{children}</Suspense>
             </main>
           </AuthContext>
         </main>
